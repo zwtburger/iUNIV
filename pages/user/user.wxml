@@ -18,7 +18,7 @@
     </view>
   </view>
 
-  <view class='tab_content' class='tab_content'>
+  <view class='tab_content'>
     <view class='nav-view'>
       <navigator url='../activity/activity' class='nav'>
         <image src='/images/activity.png' class='icon'></image>
