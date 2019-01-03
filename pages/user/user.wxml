@@ -1,0 +1,46 @@
+<!--pages/user/user.wxml-->
+<view class='tab_container'>
+  <image src='{{avatarUrl}}' class='portrait'></image>
+
+  <view class='user_name'>
+    <text>{{nickName}}</text>
+  </view>
+  <view class='user_major'>
+    <text>{{major}}</text>
+  </view>
+
+  <view class='activity_container'>
+    <view  class='activity_number_1'>
+      <text>{{actNum}}</text>
+    </view>
+    <view  class='activity_number_2'>
+      <text>活动次数</text>
+    </view>
+  </view>
+
+  <view class='tab_content' class='tab_content'>
+    <view class='nav-view'>
+      <navigator url='../activity/activity' class='nav'>
+        <image src='/images/activity.png' class='icon'></image>
+        <text class='nav_text'>我的活动</text>
+        <view class='icon-arrow'></view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='nav-view'>
+    <navigator url='../follow/follow' class='nav'>
+      <image src='/images/follow.png' class='icon'></image>
+      <text class='nav_text'>我的关注</text>
+      <view class='icon-arrow'></view>
+    </navigator>
+  </view>
+
+  <view class='nav-view'>
+    <navigator url='../setting/setting' class='nav'>
+      <image src='/images/setting.png' class='icon'></image>
+      <text class='nav_text'>设置</text>
+      <view class='icon-arrow'></view>
+    </navigator>
+  </view>
+</view>

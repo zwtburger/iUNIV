@@ -1,0 +1,108 @@
+/* pages/actInfo/actInfo.wxss */
+.list-item{
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  padding:20rpx;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+.detail-item{
+  display: flex;
+  flex-direction: row;
+}
+
+.name{
+  font-size: 50rpx;
+  color: #000;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.date{
+  font-size: 35rpx;
+  color: #aaa;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.place{
+  font-size: 35rpx;
+  color: #aaa;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.status{
+  font-size: 50rpx;
+  color: #000;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.join-false {
+  width: 200rpx;
+  margin-top: 30rpx;
+  background-color: #00BFFF;
+  color: #FFF;
+}
+
+.join-true {
+  width: 200rpx;
+  margin-top: 30rpx;
+  background-color: #c8c8cd;
+  color: #FFF;
+}
+
+.intro{
+  display: flex;
+  flex-direction:column;
+  padding:20rpx;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+.intro-title{
+  text-align: center;
+  font-size: 50rpx;
+  color: #000;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.intro-detail{
+  font-size: 35rpx;
+  color: #000;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.participants{
+  display: flex;
+  flex-direction:column;
+  padding:20rpx;
+  border-bottom: 3rpx solid gainsboro;
+}
+
+.participants-title{
+  text-align: center;
+  font-size: 50rpx;
+  color: #000;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.participants-detail{
+  display: flex;
+  font-size: 35rpx;
+  color: #000;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 25rpx;
+  margin-top: 22rpx;
+}
+
+.portrait{
+  width: 100rpx;
+  height:100rpx;
+  margin: 30rpx;
+}

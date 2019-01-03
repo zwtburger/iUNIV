@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="list-container">
+  <view wx:for="{{actList}}" wx:key="aid">
+    <navigator url="../actInfo/actInfo?aid={{item.aid}}">
+      <view class="list-item">
+        <view class="detail-item">
+          <view class="name">{{item.name}}</view>
+          <view class="status">{{item.status}}</view>
+        </view>
+        <view class="detail-item">
+          <view class="date">{{item.date}}</view>
+          <view class="place">{{item.place}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

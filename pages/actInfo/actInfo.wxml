@@ -1,0 +1,31 @@
+<!--pages/actInfo/actInfo.wxml-->
+<view class="list-item">
+  <view class="detail-item">
+    <view class="name">{{name}}</view>
+    <view class="status">{{status}}</view>
+  </view>
+  <view class="detail-item">
+    <view class="date">{{date}}</view>
+    <view class="place">{{place}}</view>
+  </view>
+  <view wx:if="{{ifJoin}}">
+    <button class='join-true' bindtap='joinActivity'>取消报名</button>
+  </view>
+  <view wx:else>
+    <button class='join-false' bindtap='joinActivity'>我要报名</button>
+  </view>
+</view>
+<view class="intro">
+  <view class="intro-title">活动介绍</view>
+  <view class="intro-detail">{{introduction}}</view>
+</view>
+<view class="participants">
+  <view class="participants-title">参与者</view>
+  <view class="participants-detail">
+    <view wx:for="{{partList}}" wx:key="uid">
+      <navigator url="../userInfo/userInfo?uid={{item.uid}}">
+        <image class="portrait" src="{{item.avatarUrl}}"></image> 
+      </navigator>
+    </view>
+  </view>
+</view>
