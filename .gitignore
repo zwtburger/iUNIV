@@ -2,3 +2,4 @@ iUNIVplus.cn/
 server/1_root_bundle.crt
 server/2_iUNIVplus.cn.crt
 server/3_iUNIVplus.cn.key
+server/__pycache__/
