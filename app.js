@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    server: 'https://188.131.229.184:8888'
+    server: 'https://iunivplus.cn:8888'
   }
 })
