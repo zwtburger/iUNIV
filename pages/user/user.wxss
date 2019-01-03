@@ -53,6 +53,7 @@ page {
   width: 160rpx;
   height: 160rpx;
   margin-bottom: 20rpx;
+  border-radius: 15rpx;
 }
 
 .user_name {
