@@ -125,4 +125,4 @@ def unjoin():
     return jsonify({'errcode': 0, 'errmsg': 'ok'})
 
 if __name__ == '__main__':
-    app.run(host = '188.131.229.184', port = 8888, ssl_context = 'adhoc')
+    app.run(host = '172.21.0.2', port = 8888, ssl_context = 'adhoc')
