@@ -30,7 +30,7 @@ def insertUser(info):
         userList.append(userInfo)
         return userInfo
     else:
-        return ''
+        return userInfo
 
 def findUserByID(uid):
     for user in userList:
