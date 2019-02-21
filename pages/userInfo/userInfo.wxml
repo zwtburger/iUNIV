@@ -1,16 +1,19 @@
 <!--pages/userInfo/userInfo.wxml-->
 <view class='tab_container'>
-  <view class='tab_container' style='background-image:url(../../images/background.png);background-size:cover'>
   <view class='user_name'>
     <text>{{nickName}}</text>
   </view>
+
   <view class='user_major'>
     <text>{{major}}</text>
   </view>
+
   <image src='{{avatarUrl}}' class='portrait'></image>
+
   <view  class='activity_number_2'>
     <text>活动次数</text>
   </view>
+
   <view  class='activity_number_1'>
     <text>{{actNum}}</text>
   </view>
@@ -28,5 +31,5 @@
       <button class='act' bindtap='goToAct'>TA的活动</button>
     </view>
   </view>
-  </view>
+
 </view>

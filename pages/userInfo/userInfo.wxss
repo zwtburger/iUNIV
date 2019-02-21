@@ -5,11 +5,14 @@ page {
 
 .tab_container {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1550723434&di=e408cdb9768fafcd4fa79e0207d224f4&src=http://pic.58pic.com/58pic/15/13/33/83758PICjZT_1024.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .portrait {
@@ -27,7 +30,7 @@ page {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:white;
+  color: white;
   margin: 3rpx;
   font-size: 60rpx;
   margin-top: 16rpx;
