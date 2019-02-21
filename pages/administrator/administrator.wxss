@@ -1,0 +1,68 @@
+/**administrator.wxss**/
+.list-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.list-container text{
+  font-weight: bold;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.list-item{
+  display: flex;
+  flex-direction:column;
+  font-size: 30rpx;
+}
+.detail-item{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 30rpx;
+}
+.title{
+  font-weight: bold;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  flex-direction: row;
+}
+.time{
+  font-size: 20rpx;
+  color: gray;
+  margin-left: 5rpx;
+  margin-top: 10rpx;
+}
+.suggest{
+  margin-left:30rpx;
+  height: 200rpx;
+  background-color: rgba(220, 220, 220, 0.2);
+  width: 590rpx; 
+  padding: 30rpx;
+}
+.section{
+  border-bottom: 1rpx solid gainsboro;
+}
+.upload{
+  height: 200rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  color: gray;
+  border: 5rpx dashed gainsboro;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-top: 70rpx;
+  margin-left: 30rpx;
+}
+.submit{
+  margin-top: 50rpx;
+  width: 80%;
+  border-radius: 30px;
+  background-color: #00BFFF;
+  color: white;
+}
+button::after{
+  border: none;
+}

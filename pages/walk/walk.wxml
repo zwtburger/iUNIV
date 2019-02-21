@@ -1,10 +1,10 @@
 <!--pages/walk/walk.wxml-->
-<view class="list-container">
-  <view wx:for="{{userList}}" wx:key="uid">
-    <navigator url="../userInfo/userInfo?uid={{item.uid}}">
-      <view class="list-item">
-        <image class="portrait" src="{{item.avatarUrl}}"></image>
-        <view class="name">{{item.nickName}}</view>
+<view class='list-container'>
+  <view wx:for='{{userList}}' wx:key='uid'>
+    <navigator url='../userInfo/userInfo?uid={{item.uid}}'>
+      <view class='list-item'>
+        <image class='portrait' src='{{item.avatarUrl}}'></image>
+        <view class='name'>{{item.nickName}}</view>
       </view>
     </navigator>
   </view>

@@ -4,9 +4,22 @@
     <view class="name">{{name}}</view>
     <view class="status">{{status}}</view>
   </view>
+  <image class='img' src='../../images/colorful-upcoming-events.png' mode='widthFix'></image>
   <view class="detail-item">
-    <view class="date">{{date}}</view>
-    <view class="place">{{place}}</view>
+    <image class='icon' src='../../images/date.png' mode='widthFix'></image>
+    <view class="info">{{date}}</view>
+  </view>
+  <view class="detail-item">
+    <image class='icon' src='../../images/place.png' mode='widthFix'></image>
+    <view class="info">{{place}}</view>
+  </view>
+  <view class="detail-item">
+    <image class='icon' src='../../images/fee.png' mode='widthFix'></image>
+    <view class="info">50元</view>
+  </view>
+  <view class="detail-item">
+    <image class='icon' src='../../images/people.png' mode='widthFix'></image>
+    <view class="info">20人</view>
   </view>
   <view wx:if="{{ifJoin}}">
     <button class='join-true' bindtap='joinActivity'>取消报名</button>

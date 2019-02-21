@@ -1,57 +1,55 @@
 /* pages/actInfo/actInfo.wxss */
 .list-item{
-  height: 300rpx;
+  height: 800rpx;
   display: flex;
   flex-direction: column;
-  padding:20rpx;
   border-bottom: 3rpx solid gainsboro;
 }
-
+.img{
+  width: 700rpx;
+  border-radius: 5px;
+  margin: 25rpx;
+}
 .detail-item{
   display: flex;
   flex-direction: row;
 }
-
 .name{
-  font-size: 50rpx;
-  color: #000;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
-}
-
-.date{
   font-size: 35rpx;
-  color: #aaa;
   margin-left: 25rpx;
-  margin-top: 22rpx;
+  margin-top: 40rpx;
+  font-weight: bold;
 }
-
-.place{
-  font-size: 35rpx;
-  color: #aaa;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
-}
-
 .status{
-  font-size: 50rpx;
-  color: #000;
+  font-size: 25rpx;
+  margin-left: 45rpx;
+  margin-top: 50rpx;
+}
+.info{
+  font-size: 25rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.icon{
+  width: 25rpx;
   margin-left: 25rpx;
-  margin-top: 22rpx;
+  margin-top: 15rpx;
 }
 
 .join-false {
-  width: 200rpx;
+  width: 300rpx;
   margin-top: 30rpx;
   background-color: #00BFFF;
   color: #FFF;
+  font-size: 35rpx;
 }
 
 .join-true {
-  width: 200rpx;
+  width: 300rpx;
   margin-top: 30rpx;
   background-color: #c8c8cd;
   color: #FFF;
+  font-size: 35rpx;
 }
 
 .intro{
@@ -63,17 +61,18 @@
 
 .intro-title{
   text-align: center;
-  font-size: 50rpx;
-  color: #000;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
+  font-size: 32rpx;
+  margin: 25rpx;
+  font-weight: bold;
 }
 
 .intro-detail{
-  font-size: 35rpx;
+  font-size: 32rpx;
   color: #000;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
+  margin: 10rpx;
+  border: 1px dashed rgba(128, 128, 128, 0.8);
+  padding: 30rpx;
+  align-items: center;
 }
 
 .participants{
@@ -85,10 +84,9 @@
 
 .participants-title{
   text-align: center;
-  font-size: 50rpx;
-  color: #000;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
+  font-size: 32rpx;
+  margin: 25rpx;
+  font-weight: bold;
 }
 
 .participants-detail{
@@ -97,13 +95,11 @@
   color: #000;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
 }
 
 .portrait{
-  width: 100rpx;
-  height:100rpx;
-  margin: 30rpx;
-  border-radius: 15rpx;
+  width: 130rpx;
+  height:130rpx;
+  border-radius: 65rpx;
+  margin: 25rpx;
 }

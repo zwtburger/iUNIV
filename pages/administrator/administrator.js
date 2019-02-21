@@ -1,29 +1,30 @@
-// pages/activity/activity.js
+// pages/administrator/administrator.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  
   data: {
-    joinActList: [],
-    uid: ''
+
   },
+  submit: function(){
+    wx.showModal({
+      title: '确认提交？',
+      content: '活动提交后无法修改！',
+    })
+  },
+  upload:function(){
+    wx.chooseImage({
+      success: function(res) {},
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    if (typeof(options.uid) == 'undefined') {
-      that.setData({
-        uid: getApp().globalData.userInfo.uid
-      });
-    } else {
-      that.setData({
-        uid: options.uid
-      });
-    }
+
   },
 
   /**
@@ -37,21 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this;
-    wx.request({
-      url: getApp().globalData.server + '/joinActList',
-      data: {
-        uid: that.data.uid
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        that.setData({
-          joinActList: res.data.joinActList
-        });
-      }
-    });
+
   },
 
   /**
@@ -65,6 +52,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+
   },
 
   /**

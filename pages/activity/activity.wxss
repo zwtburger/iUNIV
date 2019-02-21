@@ -7,38 +7,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+.img{
+  width: 700rpx;
+  border-radius: 5px;
+  margin: 25rpx;
+}
 .list-item{
-  height: 200rpx;
   display: flex;
   flex-direction:column;
-  padding:20rpx;
-  border-bottom: 3rpx solid gainsboro;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid gainsboro;
 }
 .detail-item{
   display: flex;
   flex-direction: row;
+  align-content: center;
 }
 .name{
-  font-size: 50rpx;
-  color: #000;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
-}
-.date{
   font-size: 35rpx;
-  color: #aaa;
   margin-left: 25rpx;
-  margin-top: 22rpx;
-}
-.place{
-  font-size: 35rpx;
-  color: #aaa;
-  margin-left: 25rpx;
-  margin-top: 22rpx;
+  margin-top: 40rpx;
+  font-weight: bold;
 }
 .status{
-  font-size: 50rpx;
-  color: #000;
+  font-size: 25rpx;
+  margin-left: 45rpx;
+  margin-top: 50rpx;
+}
+.info{
+  font-size: 25rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.icon{
+  width: 25rpx;
   margin-left: 25rpx;
-  margin-top: 22rpx;
+  margin-top: 15rpx;
 }

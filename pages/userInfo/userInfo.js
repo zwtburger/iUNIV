@@ -13,6 +13,12 @@ Page({
     ifFollow: false
   },
 
+  goToAct: function (e) {
+    wx.navigateTo({
+      url: '../activity/activity?uid=' + this.data.uid,
+    })
+  },
+
   followUser: function (e) {
     var that = this;
     if (that.data.ifFollow) {
@@ -67,7 +73,7 @@ Page({
     var that = this;
     that.setData({
       uid: options.uid
-    })
+    });
     wx.request({
       url: getApp().globalData.server + '/userInfo',
       data: {

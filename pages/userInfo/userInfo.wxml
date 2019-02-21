@@ -1,5 +1,6 @@
 <!--pages/userInfo/userInfo.wxml-->
 <view class='tab_container'>
+  <view class='tab_container' style='background-image:url(../../images/background.png);background-size:cover'>
   <view class='user_name'>
     <text>{{nickName}}</text>
   </view>
@@ -13,10 +14,19 @@
   <view  class='activity_number_1'>
     <text>{{actNum}}</text>
   </view>
-  <view wx:if="{{ifFollow}}">
-    <button class='follow-true' bindtap='followUser'>取消关注</button>
+
+  <view class='buttons'>
+    <view class='button'>
+      <view wx:if="{{ifFollow}}">
+        <button class='follow-true' bindtap='followUser'>取消关注</button>
+      </view>
+      <view wx:else>
+        <button class='follow-false' bindtap='followUser'>关注TA</button>
+      </view>
+    </view>
+    <view class='button'>
+      <button class='act' bindtap='goToAct'>TA的活动</button>
+    </view>
   </view>
-  <view wx:else>
-    <button class='follow-false' bindtap='followUser'>关注TA</button>
   </view>
 </view>

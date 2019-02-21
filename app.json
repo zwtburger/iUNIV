@@ -9,7 +9,8 @@
     "pages/follow/follow",
     "pages/setting/setting",
     "pages/userInfo/userInfo",
-    "pages/actInfo/actInfo"
+    "pages/actInfo/actInfo",
+    "pages/administrator/administrator"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -38,7 +39,7 @@
         "selectedIconPath": "images/user.png",
         "iconPath": "images/user.png",
         "pagePath": "pages/user/user",
-        "text": "用户"
+        "text": "我的"
       }
     ]
   }
