@@ -58,7 +58,7 @@ Page({
               'content-type': 'application/json'
             },
             success: function (res) {
-              wx.navigateTo({
+              wx.switchTab({
                 url: '../../pages/index/index'
               });
             }

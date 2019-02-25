@@ -48,10 +48,10 @@ def login():
 
 @app.route('/newActivity')
 def newActivity():
-    name = request.args.get('name').decode('utf-8')
+    name = request.args.get('name').encode('utf-8')
     date = request.args.get('date')
-    place = request.args.get('place').decode('utf-8')
-    introduction = request.args.get('introduction').decode('utf-8')
+    place = request.args.get('place').encode('utf-8')
+    introduction = request.args.get('introduction').encode('utf-8')
 
     info = {
         'name': name,
@@ -60,7 +60,7 @@ def newActivity():
         'introduction': introduction
     }
 
-    actInfo = findActByInfo(info)
+    actInfo = insertActivity(info)
 
     return jsonify({'errcode': 0, 'errmsg': 'ok', 'actInfo': actInfo})
 
