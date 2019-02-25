@@ -14,6 +14,14 @@ def findUserByInfo(info):
             userInfo = user
     return userInfo
 
+def findActByInfo(info):
+    actInfo = ''
+    for act in actList:
+        if act['name'] == info['name'] and act['date'] == info['date'] \
+            and act['place'] == info['place'] and act['introduction'] == info['introduction']:
+            actInfo = act
+    return actInfo
+
 def insertUser(info):
     userInfo = findUserByInfo(info)
     if userInfo == '':
@@ -31,6 +39,24 @@ def insertUser(info):
         return userInfo
     else:
         return userInfo
+
+def insertActivity(info):
+    actInfo = findActByInfo(info)
+    if actInfo == '':
+        number = len(actList)
+        actInfo = {
+            'name': info['name'],
+            'date': info['date'],
+            'place': info['place'],
+            'introduction': info['introduction'],
+            'joinList': [],
+            'status': '即将开始',
+            'aid': str(number + 1)
+        }
+        actList.append(actInfo)
+        return actInfo
+    else
+        return actInfo
 
 def findUserByID(uid):
     for user in userList:

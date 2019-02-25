@@ -46,6 +46,24 @@ def login():
 
     return jsonify({'errcode': 0, 'errmsg': 'ok', 'userInfo': userInfo})
 
+@app.route('/newActivity')
+def activity():
+    name = request.args.get('name')
+    date = request.args.get('date')
+    place = request.args.get('place')
+    introduction = request.args.get('introduction')
+
+    info = {
+        'name': name,
+        'date': date,
+        'place': place,
+        'introduction': introduction
+    }
+
+    actInfo = findActByInfo(info)
+
+    return jsonify({'errcode': 0, 'errmsg': 'ok', 'actInfo': actInfo})
+
 @app.route('/activity')
 def activity():
     return jsonify({'errcode': 0, 'errmsg': 'ok', 'actList': actList})
