@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/administrator/administrator",
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
@@ -9,8 +10,7 @@
     "pages/follow/follow",
     "pages/setting/setting",
     "pages/userInfo/userInfo",
-    "pages/actInfo/actInfo",
-    "pages/administrator/administrator"
+    "pages/actInfo/actInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

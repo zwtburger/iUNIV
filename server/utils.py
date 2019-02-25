@@ -17,8 +17,7 @@ def findUserByInfo(info):
 def findActByInfo(info):
     actInfo = ''
     for act in actList:
-        if act['name'] == info['name'] and act['date'] == info['date'] \
-            and act['place'] == info['place'] and act['introduction'] == info['introduction']:
+        if act['name'] == info['name'] and act['date'] == info['date'] and act['place'] == info['place'] and act['introduction'] == info['introduction']:
             actInfo = act
     return actInfo
 
