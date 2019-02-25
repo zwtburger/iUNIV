@@ -55,7 +55,7 @@ def insertActivity(info):
         }
         actList.append(actInfo)
         return actInfo
-    else：
+    else:
         return actInfo
 
 def findUserByID(uid):
