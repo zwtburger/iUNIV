@@ -48,10 +48,10 @@ def login():
 
 @app.route('/newActivity')
 def newActivity():
-    name = request.args.get('name')
+    name = request.args.get('name').decode('utf-8')
     date = request.args.get('date')
-    place = request.args.get('place')
-    introduction = request.args.get('introduction')
+    place = request.args.get('place').decode('utf-8')
+    introduction = request.args.get('introduction').decode('utf-8')
 
     info = {
         'name': name,
