@@ -44,6 +44,24 @@
   font-size: 35rpx;
 }
 
+/* zwt */
+
+.wait-true { 
+  color: #9a9a9c;
+  font-size: 25rpx;
+  margin-left:32%;
+  justify-content: center;
+}
+
+.join-dlt {
+  width: 300rpx;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  background-color: #ec7d52;
+  color: #FFF;
+  font-size: 35rpx;
+}
+
 .join-true {
   width: 300rpx;
   margin-top: 30rpx;

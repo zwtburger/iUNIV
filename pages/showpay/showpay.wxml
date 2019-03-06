@@ -1,0 +1,4 @@
+<!--pages/showpay/showpay.wxml-->
+<view class='name'>付款二维码</view>
+<image class='pay_qrcode' src='../../images/pay_qrcode.png' bindtap='showqr'></image>
+<view class='info'>请尽快付款，以免耽误您的报名，谢谢</view>

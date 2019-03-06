@@ -21,12 +21,20 @@
     <image class='icon' src='../../images/people.png' mode='widthFix'></image>
     <view class="info">20人</view>
   </view>
-  <view wx:if="{{ifJoin}}">
+
+  <view wx:if="{{ifJoin && ifPay}}">                                         
     <button class='join-true' bindtap='joinActivity'>取消报名</button>
   </view>
-  <view wx:else>
-    <button class='join-false' bindtap='joinActivity'>我要报名</button>
+
+  <view wx:elif="{{ifJoin && !ifPay}}" >
+    <view class='wait-true'>抢位成功，等待确认付款</view>
+    <button class='join-dlt' bindtap='joinActivity'>取消报名</button>
   </view>
+
+  <view wx:elif="{{!ifJoin && !ifPay}}">
+    <button class='join-false' bindtap='joinActivity'>我要抢位</button>
+  </view>
+
 </view>
 <view class="intro">
   <view class="intro-title">活动介绍</view>

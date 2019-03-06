@@ -1,4 +1,4 @@
-// pages/administrator/administrator.js
+// pages/showpay/showpay.js
 Page({
 
   /**
@@ -7,18 +7,14 @@ Page({
   data: {
 
   },
-  submit: function(){
-    wx.showModal({
-      title: '确认提交？',
-      content: '活动提交后无法修改！',
-    })
-  },
-  upload:function(){
-    wx.chooseImage({
-      success: function(res) {},
-    })
-  },
 
+  showqr: function(){
+    wx.previewImage({
+      current: 'http://05.imgmini.eastday.com/mobile/20170821/20170821113806_20503c72900a733831b83f4d1fee9f10_3.jpeg', // 当前显示图片的http链接
+      urls: ['http://05.imgmini.eastday.com/mobile/20170821/20170821113806_20503c72900a733831b83f4d1fee9f10_3.jpeg']
+    })
+    console.log('111')
+  },
 
   /**
    * 生命周期函数--监听页面加载

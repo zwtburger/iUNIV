@@ -12,6 +12,7 @@ Page({
     partList: [],
     status: '',
     ifJoin: false,
+    ifPay: false,
     aid: ''
   },
 
@@ -34,15 +35,18 @@ Page({
           introduction: res.data.actInfo.introduction,
           partList: res.data.actInfo.joinList,
           status: res.data.actInfo.status,
-          ifJoin: res.data.actInfo.ifJoin
+          ifJoin: res.data.actInfo.ifJoin,
+          //ifPay: res.data.actInfo.ifPay
         });
       }
     });
+    console.log("re", that.data.ifJoin, that.data.ifPay);
   },
 
   joinActivity: function (e) {
     var that = this;
-    if (that.data.ifJoin) {
+    console.log(that.data.ifJoin, that.data.ifPay);
+    if (that.data.ifJoin && that.data.ifPay) {                    // zwt 判断是否报名并付款
       wx.request({
         url: getApp().globalData.server + '/unjoin',
         data: {
@@ -54,17 +58,19 @@ Page({
         },
         success: function (res) {
           wx.showToast({
-            title: '取消报名',
-            duration: 500,
+            title: '取消报名，定金不予返回',
+            duration: 900,
             mask: true
           });
-          that.setData({
-            ifJoin: false
+          taht.setData({
+              ifJoin:false,
+              ifPay:false
           });
           that.refresh();
         }
       })
-    } else {
+    } 
+    else if (!that.data.ifJoin && !that.data.ifPay) {
       wx.request({
         url: getApp().globalData.server + '/join',
         data: {
@@ -75,19 +81,57 @@ Page({
           'content-type': 'application/json'
         },
         success: function (res) {
+          
+          wx.navigateTo({                    //保留当前页面，跳转到应用内的某个页面
+            url: "/pages/showpay/showpay"
+          })
           wx.showToast({
-            title: '报名成功',
-            duration: 500,
+            title: '抢位成功',
+            duration: 900,
             mask: true
           });
+          //console.log("!!")
           that.setData({
-            ifJoin: true
+            ifJoin: true,
+            ifPay:false
           });
           that.refresh();
         }
       })
     }
+    else if (that.data.ifJoin && !that.data.ifPay) {
+      wx.request({
+        url: getApp().globalData.server + '/unjoin',
+        data: {
+          uid: getApp().globalData.userInfo.uid,
+          aid: that.data.aid
+        },
+        header: {
+          'content-type': 'application/json'
+        },
+        success: function (res) {
+          wx.showToast({
+            title: '取消成功',
+            duration: 900,
+            mask: true
+          });
+          that.setData({
+            ifJoin: false,
+            ifPay:false
+          });
+          //console.log(that.data.ifJoin, that.data.ifPay);
+          that.refresh();
+        }
+      })
+    }
   },
+
+  toPay: function () {
+    wx.navigateTo({    //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
+      url: "/pages/showpay/showpay"
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

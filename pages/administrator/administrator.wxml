@@ -1,51 +1,39 @@
-<!--pages/administrator/administrator.wxml-->
 <view class='list-container'>
-  <form bindsubmit='submit'>
-    <view class='list-item'>
-      <view class='detail-item section'>
-        <view class='title'>活动主题</view>
-        <input placeholder='请输入活动主题' name='name'></input>
-      </view>
-      <view class='detail-item section'>
-        <view class='title'>开始日期</view>
-        <picker mode='date' value='{{beginDate}}' bindchange='bindBeginDateChange'><view class='time'>{{beginDate}}</view></picker>
-      </view>
-      <view class='detail-item section'>
-        <view class='title'>开始时间</view>
-        <picker mode='time' value='{{beginTime}}' bindchange='bindBeginTimeChange'><view class='time'>{{beginTime}}</view></picker>
-      </view>
-      <view class='detail-item section'>
-        <view class='title'>结束日期</view>
-        <picker mode='date' value='{{endDate}}' bindchange='bindEndDateChange'><view class='time'>{{endDate}}</view></picker>
-      </view>
-      <view class='detail-item section'>
-        <view class='title'>结束时间</view>
-        <picker mode='time' value='{{endTime}}' bindchange='bindEndTimeChange'><view class='time'>{{endTime}}</view></picker>
-      </view>
-
-      <view class='detail-item section'>
-        <view class='title'>活动地点</view>
-        <input placeholder='请输入活动地点' name='place'></input>
-      </view>
-      <view class='detail-item section'>
-        <view class='title'>活动费用</view>
-        <input placeholder='请输入活动费用' name='fee'></input>
-      </view>
-      <view class='detail-item'>
-        <view class='title'>详细描述</view>
-      </view>
-      <view class='detail-item'>
-        <view class='introduction'>
-          <textarea name='introduction' style='height:100rpx' placeholder='请输入详细描述'></textarea>
-        </view>
-      </view>
-      <view class='detail-item'>
-        <view class='title'>上传照片</view>
-      </view>
-      <view class='detail-item'>
-        <button class='upload' bindtap='upload' >点击上传</button>
+  <view class='list-item'>
+   <view class='detail-item section'>
+      <view class='title'>活动主题</view>
+      <input placeholder='请输入活动主题'></input>
+    </view>
+    <view class='detail-item section'>
+      <view class='title'>活动时间</view>
+      <picker mode='date'><view class='time'> 开始日期 - </view></picker>
+      <picker mode='time'><view class='time'> 开始时间 </view></picker>
+      <text>至</text>
+      <picker mode='date'><view class='time'> 结束日期 - </view></picker>
+      <picker mode='time'><view class='time'> 结束时间 </view></picker>
+    </view>
+    <view class='detail-item section'>
+      <view class='title'>活动地点</view>
+      <input placeholder='请输入活动地点'></input>
+    </view>
+    <view class='detail-item section'>
+      <view class='title'>活动费用</view>
+      <input placeholder='请输入活动费用'></input>
+    </view>
+    <view class='detail-item'>
+      <view class='title'>详细描述</view>
+    </view>
+    <view class='detail-item'>
+      <view class='suggest'>
+        <textarea name='suggest' style='height:100rpx;' placeholder='请输入详细描述'></textarea>
       </view>
     </view>
-    <button class='submit' form-type='submit'>完成</button>
-  </form>
+    <view class='detail-item'>
+      <view class='title'>上传照片</view>
+    </view>
+    <view class='detail-item'>
+      <button class='upload' bindtap='upload' >点击上传</button>
+    </view>
+    <button class='submit' bindtap='submit'>完成</button>
+  </view>
 </view>
